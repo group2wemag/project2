@@ -1,0 +1,55 @@
+class Media:
+    def __init__(self, title, author, publisher):
+        self.title = title
+        self.author = author
+        self.publisher = publisher
+
+
+class Book(Media):
+    def __init__(self, title, author, publisher, numberOfPages):
+        Media.__init__(self, title, author, publisher)
+        self.numberOfPages = numberOfPages
+
+    def __str__(self):
+        return "Book--> %s written by %s" % (self.title, self.author)
+
+
+class Video(Media):
+    def __init__(self, title, author, publisher, runningTime):
+        Media.__init__(self, title, author, publisher)
+        self.runningTime = runningTime
+
+    def __str__(self):
+        return "Video--> %s mins %s created by %s" % (self.runningTime, self.title, self.author)
+
+
+class Member:
+
+    def __init__(self, name):
+        self.name = name
+        self.checkedOutItems = []
+
+    def checkIn(self, media):
+        pass
+
+
+    def printCheckedOutItems(self):
+        #We make a list (line 30), manipulate it when users check in/check out, then print all the items
+        pass
+
+    def checkOut(self, media, members):
+        pass
+
+
+
+
+
+
+
+######################################
+
+def displayStats(members, items):
+    totalBooks = 0
+    totalVideo = 0
+    checkOutBooks = 0
+    checkOutVideo = 0
